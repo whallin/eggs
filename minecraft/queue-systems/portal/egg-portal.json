@@ -1,0 +1,42 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2021-02-06T12:30:27+01:00",
+    "name": "Portal",
+    "author": "me@williamhallin.com",
+    "description": "Some server owners of Minecraft with a network with multiple hubs and a plethora of game modes are frequently trying to find ways to efficiently connect all their hubs to form a queue to each of their game modes. Portal is the queue system to be chosen by many for its light-weight and easy functionality. Whether you are running a small network or a multi-server system, Portal will handle priorities and the people in your queue with ease.",
+    "features": null,
+    "images": [
+        "quay.io\/pterodactyl\/core:java",
+        "quay.io\/pterodactyl\/core:java-11"
+    ],
+    "file_denylist": "",
+    "startup": "java -jar {{PORTAL_JARFILE}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"[Portal] Portal is now running...\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "Portal Jar File",
+            "description": "The name of the .jar file to use when running Portal.",
+            "env_variable": "PORTAL_JARFILE",
+            "default_value": "portal-independent.jar",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|regex:\/^([\\w\\d._-]+)(\\.jar)$\/"
+        }
+    ]
+}
