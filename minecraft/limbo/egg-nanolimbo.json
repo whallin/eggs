@@ -1,0 +1,41 @@
+{
+    "_comment": "DO NOT EDIT: FILE GENERATED AUTOMATICALLY BY PTERODACTYL PANEL - PTERODACTYL.IO",
+    "meta": {
+        "version": "PTDL_v1",
+        "update_url": null
+    },
+    "exported_at": "2021-02-06T12:30:27+01:00",
+    "name": "NanoLimbo",
+    "author": "williamh@newgentdigital.com",
+    "description": "A lightweight Limbo solution and system for Minecraft networks.",
+    "features": null,
+    "images": [
+        "quay.io\/wisp\/images:java"
+    ],
+    "file_denylist": "",
+    "startup": "java -Xms128M -Xmx{{SERVER_MEMORY}}M -jar {{NANOLIMBO_JARFILE}}",
+    "config": {
+        "files": "{}",
+        "startup": "{\r\n    \"done\": \"[INFO]: Server started on\",\r\n    \"userInteraction\": []\r\n}",
+        "logs": "{}",
+        "stop": "^C^C"
+    },
+    "scripts": {
+        "installation": {
+            "script": null,
+            "container": "debian:buster-slim",
+            "entrypoint": "bash"
+        }
+    },
+    "variables": [
+        {
+            "name": "NanoLimbo Jar File",
+            "description": "The name of the .jar file to use when running NanoLimbo.",
+            "env_variable": "NANOLIMBO_JARFILE",
+            "default_value": "NanoLimbo.jar",
+            "user_viewable": true,
+            "user_editable": true,
+            "rules": "required|regex:\/^([\\w\\d._-]+)(\\.jar)$\/"
+        }
+    ]
+}
