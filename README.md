@@ -1,6 +1,3 @@
-<!-- HEADER -->
-<a href="https://williamhallin.com"><img src="https://raw.githubusercontent.com/whallin/whallin/master/img_header.png" alt="A banner showing the William Hallin logo."></a>
-
 <!-- SHIELDS -->
 <p align=center>
   <a href="https://github.com/whallin/eggs/graphs/contributors">
@@ -35,6 +32,6 @@ A collection of service eggs to be used on Pterodactyl or WISP.
 
 <!-- LICENSE -->
 ## ⚖️ License
-Copyright © 2021 [William Hallin Multimedia &lt;me@williamhallin.com&gt; (https://www.williamhallin.com)](https://www.williamhallin.com)
+Copyright © 2021 [William Hallin Multimedia &lt;hey@whallin.me&gt; (https://whallin.me)](https://whallin.me)
 
 whallin/eggs is licensed under the ``GPL-3.0`` license. Read more about it's meaning and effects [here](https://github.com/whallin/eggs/blob/main/LICENSE).
